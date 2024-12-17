@@ -22,7 +22,7 @@ Open Skills Source is a platform designed to provide free resources, curated cou
 This repository contains the client-side code of the website, built from scratch using HTML, CSS, and JavaScript. The backend, including APIs and databases, will be added in future versions to allow for user authentication, dynamic content, and enhanced personalization.
 
 ## Collaboration
-We are proud received collabo offer from ASR LEARNING INSTITUTE.
+We are proud received collab offer from ASR LEARNING INSTITUTE.
 
 ## Future Enhancements
 - Integration of backend services for dynamic data management.
