@@ -1,4 +1,6 @@
 # Open Skills Source (https://bit.ly/open-skills-source)
+Branch 1: Main for HTML, CSS, JS Website
+Branch 2: Master for MVC Based Website
 
 Group Members:
 
