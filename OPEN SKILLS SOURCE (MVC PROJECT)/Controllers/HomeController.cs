@@ -15,10 +15,20 @@ namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Controllers
 
         public IActionResult Index()
         {
+             return View();
+        }
+
+        public IActionResult AboutUs()
+        {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ExploreSkills()
+        {
+            return View();
+        }
+
+        public IActionResult HelpFromAI()
         {
             return View();
         }
@@ -29,4 +39,6 @@ namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
+
 }
