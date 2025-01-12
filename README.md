@@ -4,11 +4,11 @@
 • Branch 2 (Master): MVC ASP.NET Project
 
 
-Group Members:
+‣ Group Members:
 
-Husnain Mazhar 22101001-008
+• Husnain Mazhar 22101001-008
 
-Aimen 22101001-092
+• Aimen 22101001-092
 
 ## Project Overview
 Open Skills Source is a platform designed to provide free resources, curated courses, and personalized recommendations to learners. Our mission is to offer accessible learning tools that empower individuals to enhance their skills and achieve their goals. The platform features a user-friendly interface, where users can explore resources, discover learning paths, and access valuable educational content, all tailored to their interests.
