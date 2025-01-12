@@ -1,4 +1,6 @@
 # Open Skills Source (https://bit.ly/open-skills-source)
+Branch 1 (Main): HTML, CSS, JS Project
+Branch 2 (Master): MVC ASP.NET Project
 
 Group Members:
 
