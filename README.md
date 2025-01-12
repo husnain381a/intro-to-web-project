@@ -4,7 +4,7 @@
 • Branch 2 (Master): MVC ASP.NET Project
 
 
-‣ Group Members:
+‣ 𝗚𝗿𝗼𝘂𝗽 𝗠𝗲𝗺𝗯𝗲𝗿𝘀:
 
 • Husnain Mazhar 22101001-008
 
