@@ -1,10 +1,10 @@
-‣ Group Members:  
-- Husnain Mazhar (22101001-008)  
-- Aimen (22101001-092)  
-
 # ASP.NET MVC Project  
 
 This project has been developed and deployed using **ASP.NET MVC (C#)**.
+
+‣ Group Members:  
+- Husnain Mazhar (22101001-008)  
+- Aimen (22101001-092)
 
 ## Features and Implementation  
 
