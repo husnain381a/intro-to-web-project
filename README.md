@@ -1,4 +1,4 @@
-# ASP.NET MVC Project  
+# Open Skills Source ASP.NET MVC Project  
 
 This project has been developed and deployed using **ASP.NET MVC (C#)**.
 
