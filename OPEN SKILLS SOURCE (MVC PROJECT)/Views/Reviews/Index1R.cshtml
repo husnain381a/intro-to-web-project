@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Reviews Page";
+}
+
+@model IEnumerable<OPEN_SKILLS_SOURCE__MVC_PROJECT_.Models.Reviews>
+
+<h2>Reviews</h2>
+<p>
+    @Html.ActionLink("Add Review", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Content</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.Username</td>
+                <td>@review.Content</td>
+                <td>@review.CreatedAt</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = review.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = review.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
