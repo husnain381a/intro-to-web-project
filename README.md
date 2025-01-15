@@ -13,9 +13,10 @@ This project has been developed and deployed using **ASP.NET MVC (C#)**.
 
 ### 2. Contact Page  
 - Implemented a dynamic **Contact Page**:  
-  - Captures data from the View.  
-  - Passes data to the Controller.  
-  - Displays the output efficiently, ensuring smooth user interaction.  
+  - Captures user input from the View.
+  - Stores user-entered data into the database.
+  - Passes data to the Controller for processing.
+  - Displays stored data efficiently, ensuring smooth user interaction.  
 
 ### 3. Database Integration  
 - Connected the project to a database by:  
