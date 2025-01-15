@@ -1,6 +1,30 @@
-Group Members:  
-- Husnain Mazhar (22101001-008)  
-- Aimen (22101001-092)  
+# Open Skills Source ASP.NET MVC Project  
 
-## Deployment Update  
-The website is now developed and deployed using **ASP.NET MVC (C#)** as per the guidelines provided by our instructor. This transition enhances the structure and functionality of the platform, providing a more robust and scalable solution.
+This project has been developed and deployed using **ASP.NET MVC (C#)**.
+
+‣ Group Members:  
+- Husnain Mazhar (22101001-008)  
+- Aimen (22101001-092)
+
+## Features and Implementation  
+
+### 1. Project Setup  
+- Added **Views**, **Controllers**, **CSS**, **JavaScript** files, and **images** within the root directory for seamless integration.  
+
+### 2. Contact Page  
+- Implemented a dynamic **Contact Page**:  
+  - Captures data from the View.  
+  - Passes data to the Controller.  
+  - Displays the output efficiently, ensuring smooth user interaction.  
+
+### 3. Database Integration  
+- Connected the project to a database by:  
+  - Adding a **DbContext class** and a **Model**.  
+  - Configuring the connection string in the `appsettings.json` file.  
+  - Registering the database context in the `Program.cs` file.  
+
+### 4. CRUD Operations  
+- Added a new Controller named **Reviews** to handle **CRUD** (Create, Read, Update, Delete) operations, enabling effective data management within the application.  
+
+---
+
