@@ -1,19 +1,20 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Linq; // For LINQ queries
 using OPEN_SKILLS_SOURCE__MVC_PROJECT_.Models;
-using System.Collections.Generic; // Add this for List
+using OPEN_SKILLS_SOURCE__MVC_PROJECT_.Data;
 
 namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Controllers
 {
     public class ContactController : Controller
     {
+        private readonly AppDbcontext _context;
         private readonly ILogger<ContactController> _logger;
 
-        // Static list to store form submissions
-        private static List<(string Name, string Email, string Message)> SubmittedData = new();
-
-        public ContactController(ILogger<ContactController> logger)
+        public ContactController(AppDbcontext context, ILogger<ContactController> logger)
         {
+            _context = context;
             _logger = logger;
         }
 
@@ -24,32 +25,35 @@ namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Controllers
         }
 
         // POST: /Contact/SubmitForm
+       
         [HttpPost]
-        public IActionResult SubmitForm(string Name, string Email, string Message)
+        public IActionResult SubmitForm(ContactForms contactForm)
         {
-            // Validate form data
-            if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Message))
+            if (!ModelState.IsValid)
             {
-                ViewBag.Message = "All fields are required.";
+                ViewBag.Message = "Please fill out all fields correctly.";
                 return View("Index");
             }
+            // Save data to the database
+            _context.ContactForms.Add(contactForm);
+            _context.SaveChanges();
 
-            // Store data in static list
-            SubmittedData.Add((Name, Email, Message));
-
-            // Log form submission
-            _logger.LogInformation($"Contact form submitted by {Name} with email {Email}. Message: {Message}");
-
-            // Success message
-            ViewBag.Message = $"Thank you, {Name}. We have received your message!";
+            // Display confirmation message
+            ViewBag.Message = "Thank you for your message!";
+            ViewBag.SubmittedData = contactForm; // Display submitted data
             return View("Index");
         }
 
-        // Action to view the submitted data
-        public IActionResult ViewSubmissions()
-        {
-            return View(SubmittedData);  // Pass the list to the view
-        }
+
+        //// GET: /Contact/ViewSubmissions
+        //public IActionResult ViewSubmissions()
+        //{
+        //    // Retrieve all data from the database
+        //    var submissions = _context.ContactForms.ToList();
+
+        //    // Pass the data to the view
+        //    return View(submissions);
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

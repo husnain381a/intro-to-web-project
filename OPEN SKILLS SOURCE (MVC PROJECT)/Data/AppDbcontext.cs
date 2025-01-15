@@ -12,6 +12,8 @@ namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Data
         }
 
         public DbSet<Reviews> Reviews { get; set; }
+        public DbSet<ContactForms> ContactForms { get; set; }
+
 
     }
 }

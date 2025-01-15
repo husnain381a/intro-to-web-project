@@ -40,7 +40,7 @@ namespace OPEN_SKILLS_SOURCE__MVC_PROJECT_.Controllers
                 review.CreatedAt = DateTime.Now; // Set the current timestamp for the review
                 _context.Reviews.Add(review); // Add the review to the DbContext
                 _context.SaveChanges(); // Save the changes to the database
-                return RedirectToAction("Index1R"); // Redirect to the index page after saving
+                return RedirectToAction("Index1R"); 
             }
             return View(review); // If the form is invalid, return to the Create view
         }

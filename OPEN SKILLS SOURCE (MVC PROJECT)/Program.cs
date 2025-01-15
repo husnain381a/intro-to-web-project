@@ -11,6 +11,11 @@ var connectionString = builder.Configuration.GetConnectionString("dbconnection")
 
 builder.Services.AddDbContext<AppDbcontext>(options => options.UseSqlServer(connectionString));
 
+// Registering the DB String for the second database
+var newDbConnectionString = builder.Configuration.GetConnectionString("newdbconnection");
+builder.Services.AddDbContext < AppDbcontext > (options =>
+    options.UseSqlServer(newDbConnectionString));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
